@@ -1,0 +1,493 @@
+/* ==UserStyle==
+@name           dsia.uv.mx/miuv/escritorio/login - jun 2024
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+
+@-moz-document url-prefix("https://dsia.uv.mx/miuv/escritorio/login.aspx"), url-prefix("https://dsiapes.uv.mx/MiUVestudiantes/"), url-prefix("https://dsiapes.uv.mx/MiuvEstudiantes/") {
+    
+    :root {
+/*         --bg: url(https://preview.redd.it/uwwte8wps4h91.gif?width=640&crop=smart&auto=webp&s=6c241acafa96be0e4231c139a123a4d95228f374); */
+        --bg: url(https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        --cursor: url(https://cdn.custom-cursor.com/db/cursor/32/doritos_cursor.png);
+        --cursorHover: url(https://cdn.custom-cursor.com/db/pointer/32/doritos_pointer.png);
+/*         --bgNoticias: url(https://static1.srcdn.com/wordpress/wp-content/uploads/2020/11/Man-And-Superman-1-Review-Highlighting-The-Man-Of-Steel---s-Human-Side.jpg); */
+    }
+    
+    /* Login */
+    .row {
+        width: 100%;
+        height: 100%
+    }
+    
+    #img-logoUV {
+        content: url(https://dsiapes.uv.mx/MiuvEstudiantes/escritorio/imgsMiUV/desk/logoMiUV-blanco.png)!important;
+    }
+    
+    /* Imagen de fondo */
+    .imgLogin {
+        content: var(--bg);
+        width: 100%;
+        height: 100%;
+        filter: brightness(70%);
+        object-fit: cover;
+    }
+    
+    @media (max-width: 770px) {
+        #colImg {
+            display: unset;
+        }
+    }
+    
+    body:not(:has(#img-bgMiUV, #colImg)) {
+        background: var(--bg);
+        backdrop-filter: brightness(50%);
+        font-family: Gill Sans MT,Trebuchet MS,Segoe UI,sans-serif,Arial;
+    }
+    
+/*     body:not(:has(#img-logoUV, .imgLogin)) {
+        background: var(--bg);
+        backdrop-filter: brightness(20%);
+        font-family: Gill Sans MT,Trebuchet MS,Segoe UI,sans-serif,Arial;
+    } */
+    
+    
+    /* Efecto cristal */
+    #divIzq > div:nth-child(2) > div:nth-child(1), #div-footGeneral, #section-footGeneral, #div-footBuzon, #section-footBuzon, #div-iPersonal, #div-iAcademica, .bloques, .dvPieSeccion, #divPie, #div-contenedor {
+        border-radius: 0.5rem;
+        border: 1px solid rgb(255,255,255,0.6);
+        border-right: 1px solid rgb(255,255,255,0.4);
+        border-bottom: 1px solid rgb(255,255,255,0.4);
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        backdrop-filter: blur(10px);
+    }
+    
+    .pleca {
+        border-radius: 0 0 10px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .float-right {
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+    }
+    
+    #colImg {
+        position: fixed;
+    }
+    
+    #divIzq > div:nth-child(2) {
+        margin-right: 0;
+        margin-left: 0;
+        padding-right: 0;
+        padding-left: 0;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #divIzq > div:nth-child(2) > div:nth-child(1) {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        border-radius: 1rem;
+        
+        width: fit-content;
+        height: fit-content;
+        padding: 1rem;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        margin-bottom: 4rem;
+    }
+    
+    #divIzq > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
+        margin-top: 2rem !important
+    }
+    
+    #divIzq {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    
+    #miuv {
+        color: #00dbff;
+    }
+    
+    #inisesion {
+        color: white;
+        font-size: 28px;
+        margin-top: 0.2rem;
+    }
+    
+    .errorMsj {
+        color: #e84e2b !important;
+    }
+    
+    .text-muted {
+        color: #aeaeae !important;
+    }
+    
+    div.row:nth-child(3) {
+        margin-top: 1.8rem !important
+    }
+    
+    .txt-login {
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+    }
+    
+    #divUsrInt {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #btnEye {
+        width: 20px;
+        height: 19px;
+        position: initial;
+        margin-right: 0.5em;
+    }
+    
+    #btnValidacion {
+        box-shadow: 0px 3px 6px -1px rgba(0,0,0,0.2);
+    }
+    
+    #divCambPsw {
+        margin-top: 1.5rem;
+    }
+    
+    #divCambPsw2 {
+        margin-bottom: 1em;
+        width: 100%;
+    }
+    
+    .a-linkLogin {
+        color: #7ea4ff;
+    }
+    
+    #a-cambioPass:hover {
+        color: #c2d3fc !important;
+    }
+    #a-cambioPass2:hover {
+        color: #c2d3fc !important;
+    }
+    
+    
+    #DigiCertClickID_ysICnnSX {
+        position: fixed;
+        bottom: 0;
+        margin-bottom: 2em !important;
+    }
+    
+    #DigiCertClickID_ysICnnSXSeal > img:nth-child(1) {
+        width: 125px;
+        height: 59px;
+    }
+    
+    
+    #footer {
+        position: fixed;
+        margin: 0;
+        text-align: center;
+        bottom: 0;
+        padding-right: 0;
+    }
+    
+    #footer span {
+        color: lightgrey;
+    }
+    
+    .divDerechosReser {
+        background: linear-gradient(0deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 100%);
+        position: unset;
+        height: 3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0.5em;
+    }
+    
+    .container-fluid {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: 0;
+        margin-left: 0;
+        padding-right: 0;
+        padding-left: 0;
+        color: white;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .col-md-6 {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    
+    /* --------------------------- */
+    /* -         M E N U         - */
+    /* --------------------------- */
+    
+    
+    #img-bgMiUV {
+        content: var(--bg);
+        object-fit: cover;
+        filter: brightness(70%);
+    }
+    
+    #div-nombreUV, #section-nombreUV {
+        background: linear-gradient(to bottom left, rgba(2,0,36,1) 0%, rgba(0,0,0,0) 100%);
+    }
+    
+    #span-nombreUV {
+        color: white;
+    }
+    
+    .div-tileSistema, .div-tileFijo {
+        border-radius: 0.5rem;
+        margin-left: 0.4rem;
+        margin-right: 0.4rem;
+        margin-top: 0.32rem;
+        margin-bottom: 0.32rem;
+    }
+    
+    .div-tileSistema:has(div, a), .div-tileFijo:has(div, a) {
+        border-radius: 0.5rem;
+        box-shadow: 0 0 8px rgb(0,0,0,0.2);
+    }
+    
+    
+    div.div-tileFijo:nth-child(2) > a:nth-child(1) {
+        background: linear-gradient(0deg, rgba(0,51,102,1) 0%, rgba(0,76,152,1) 100%) !important;
+    }
+    
+    #urlMailUV {
+        background: linear-gradient(0deg, rgba(51,102,51,1) 0%, rgba(57,122,57,1) 100%) !important;
+    }
+    
+    /* Noticias */
+/*     #rssTile {
+        background: var(--bgNoticias);
+        background-size: cover;
+    } */
+    
+    /* Datos generales */
+    #imgInfoGeneral > img {
+        width: 0;
+        height: 0;
+    }
+    #Slide1P1Grid1X2 > a:nth-child(1) > span:nth-child(2) {
+        width: 100% !important;
+    }
+/*     #Slide1P1Grid1X2 > a:nth-child(1) > img {
+        content: var(--bgNoticias);
+        background-size: cover;
+        width: 100% !important;
+        height: 100% !important;
+    } */
+    
+/*     .tile-clicks > span {
+        color: white !important;
+    } */
+    
+    .divTitulo {
+        margin-top: 0.4rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .divTitulo > label {
+        color: white !important;
+    }
+    
+    .bloques {
+        padding: 0.6rem;
+        background-color: rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    #divData {
+        margin-left: 0.5rem;
+        line-height: normal;
+    }
+    
+    #divData > p, .bloques > p, #divImagen > p {
+        color: #58adf7 !important;
+    }
+    
+    #divData > p > span, #divImagen > span, .bloques > p > span, .lblNombre {
+        color: #ececec !important;
+    }
+    
+    .bloques > p, #divData > p {
+        margin-bottom: 0.7rem !important;
+    }
+    
+    #divImagen > img {
+        border-radius: 0.5rem;
+        margin-bottom: 0.2rem;
+    }
+    
+    
+    /* Nombre usuario */
+    #nombreUsuario_lblNombre, #div-nombreUsuarioInterno {
+        color: white;
+    }
+    
+    .a-mnuRegresar {
+        background-position: 1px -30px;
+    }
+    
+    #div-mnuRegresar > span {
+        color: white;
+    }
+    
+    #div-perfilInterno {
+        content: url(https://dsiapes.uv.mx/MiUVestudiantes/escritorio/imgsMiUV/desk/negro/e-activo.png);
+    }
+    
+    #li-saliar {
+        background: url(https://dsiapes.uv.mx/MiUVestudiantes/escritorio/imgsMiUV/desk/negro/logout.png) no-repeat;
+    }
+    
+    #li-salir:hover {
+        background: url(https://dsiapes.uv.mx/MiUVestudiantes/escritorio/imgsMiUV/desk/negro/logout-over.png) no-repeat;
+    }
+    
+    
+    /* Escolaridad */
+    .divTileHr, .divTileNoData, .divTileBas, .divTileFD, .divTitulo, .divTile, .boton {
+        border-radius: 0.5rem;
+    }
+    
+    .dvCali {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #form1:has(#div-contenedor, #ul-botones) {
+        margin: 1rem;
+    }
+    
+    #div-contenedor > #ul-botones {
+        margin-top: 1rem;
+    }
+    
+    #div-titulos {
+        margin-bottom: 1rem;
+    }
+    
+    #div-titulos, .fila2 {
+        background: #0202023b;
+        border-radius: 1rem !important;
+    }
+    
+    #divMensaje {
+        border-radius: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .divRequisitos {
+        padding: 0.5rem;
+    }
+    
+    /* Horario de clases */
+    .dvPieSeccion, #divPie {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+    .dvPieSecciones {
+        background: transparent !important;
+    }
+    
+    .aDetalles {
+        background-color: #165ee6;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 5px rgb(0,0,0,0.2);
+        height: auto !important;
+        margin-bottom: -6px;
+    }
+    
+    .div-tileSistema, .div-tileFijo, #rssTile, .tile-clicks, .div-tileSistema > a, .div-tileSistema > a > img, .div-tileFijo > a, .div-tileFijo > a > img {
+        border-radius: 0.5rem;
+    }
+    
+    #div-footGeneral > ul > li, #section-footGeneral > ul > li {
+        color: lightgray;
+    }
+    
+    #div-footGeneral > ul > li > a, #div-footBuzon > a, #section-footGeneral > ul > li > a, #section-footBuzon > a {
+        color: #58adf7;
+    }
+    
+    #ul-footGeneral-copyright > li, #ul-footGeneral-copyright > li {
+        color: lightgray;
+    }
+    
+    #div-footBuzon > a, #section-footBuzon > a {
+        font-size: 21px;
+    }
+    
+    #section-footBuzon > a > div {
+        height: 0.4rem;
+    }
+    
+    #section-footGeneral > #ul-footGeneral-mnu {
+        margin-bottom: 0;
+    }
+    
+    #section-footGeneral > #ul-footGeneral-copyright {
+        margin-bottom: 0.65rem;
+    }
+    
+    .royalSlider.default .arrow.left {
+        left: -44px;
+    }
+    
+    .royalSlider.default .arrow.right {
+        right: -40px;
+    }
+    
+    
+    /* Cursor effect */
+    body, .divTileNoData {
+        cursor: var(--cursor), auto !important;
+    }
+    
+    /* Cursor hover */
+    a:hover, img:hover, button:hover, input:hover, #btnEye:hover, #li-config:hover, #li-salir:hover, .grab-cursor:hover, .dvPanel:hover, #divCollapse01, #divCollapse02, .divCollapse01, .divCollapse02, .boton {
+        cursor: var(--cursorHover), auto !important;
+    }
+    
+    
+    /* TEST */
+/*     #Slide1P1Grid2X3 {
+        content: url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmZneWo0NWpidm03dTJvdDJudGx4eTYydmZ4bGFjZWV6bmN5MWtoOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5K7ngCtszoxxbaBieC/giphy.webp);
+    } */
+
+}
